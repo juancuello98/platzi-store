@@ -5,12 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent} from './components/product.component'
 
-import { FormsModule } from '@angular/forms'; //una vez agregado aca, tiene que ir al imports del NgModule
+import { FormsModule } from '@angular/forms';
+import { ExponentialPipe } from './exponential.pipe';
+import { HighlightDirective } from './highlight.directive';
+import { HomeComponent } from './home/home.component';
+import { ProductosComponent } from './productos/productos.component';
+import { ContactosComponent } from './contactos/contactos.component';
+import { DemoComponent } from './demo/demo.component'; //una vez agregado aca, tiene que ir al imports del NgModule
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent
+    ProductComponent,
+    ExponentialPipe,
+    HighlightDirective,
+    HomeComponent,
+    ProductosComponent,
+    ContactosComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,

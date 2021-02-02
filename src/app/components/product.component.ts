@@ -1,18 +1,23 @@
-import {Component} from '@angular/core'
-import {Product} from '../product.module'
+import {Component, Input, Output, EventEmitter} from '@angular/core'
+import {Product} from '../product.model'
 
 @Component({
     selector: 'app-product',
-    templateUrl:'./product.component.html'
+    templateUrl:'./product.component.html',
+    styleUrls: ['./product.component.scss']
   })
 
 
 export class ProductComponent{
-  product: Product = {
-    id: '1',
-    title: 'Camiseta Platzi',
-    price: 8000,
-    description: 'es una remera',
-    image:'../../assets/camiseta.png'
+
+  @Input()  producto : Product = <any>{};
+  @Output() productClicked : EventEmitter<any> = new EventEmitter();
+
+  today = new Date();
+
+  AddCart(){
+    this.productClicked.emit(this.producto.id)
+    console.log('Anadir al carrito')
   }
+
 }
