@@ -11,7 +11,10 @@ import { HighlightDirective } from './highlight.directive';
 import { HomeComponent } from './home/home.component';
 import { ProductosComponent } from './productos/productos.component';
 import { ContactosComponent } from './contactos/contactos.component';
-import { DemoComponent } from './demo/demo.component'; //una vez agregado aca, tiene que ir al imports del NgModule
+import { DemoComponent } from './demo/demo.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { BannerComponent } from './banner/banner.component'; //una vez agregado aca, tiene que ir al imports del NgModule
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { DemoComponent } from './demo/demo.component'; //una vez agregado aca, t
     HomeComponent,
     ProductosComponent,
     ContactosComponent,
-    DemoComponent
+    DemoComponent,
+    HeaderComponent,
+    FooterComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
