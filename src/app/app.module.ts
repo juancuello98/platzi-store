@@ -14,7 +14,9 @@ import { ContactosComponent } from './contactos/contactos.component';
 import { DemoComponent } from './demo/demo.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component'; //una vez agregado aca, tiene que ir al imports del NgModule
+import { BannerComponent } from './banner/banner.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component'; //una vez agregado aca, tiene que ir al imports del NgModule
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BannerComponent } from './banner/banner.component'; //una vez agregado 
     DemoComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    PageNotFoundComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

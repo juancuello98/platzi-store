@@ -4,6 +4,8 @@ import {HomeComponent} from './home/home.component'
 import { ContactosComponent } from './contactos/contactos.component'
 import { ProductosComponent } from './productos/productos.component';
 import {DemoComponent} from './demo/demo.component';
+import {PageNotFoundComponent} from './components/page-not-found/page-not-found.component';
+import {ProductDetailComponent} from './product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -11,8 +13,17 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path:'',
+    redirectTo: '/home',
+    pathMatch:'full'
+  },
+  {
     path:'productos',
     component: ProductosComponent
+  },
+  {
+    path:'productos/id:',
+    component: ProductDetailComponent
   },
   {
     path:'contactos',
@@ -21,6 +32,10 @@ const routes: Routes = [
   {
     path:'demo',
     component: DemoComponent
+  },
+  {
+    path:'**',
+    component: PageNotFoundComponent
   }
 ];
 
