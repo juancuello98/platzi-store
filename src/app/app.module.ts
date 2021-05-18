@@ -3,41 +3,39 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent} from './components/product.component'
+import { ProductComponent} from './components/product/product.component'
 
 import { FormsModule } from '@angular/forms';
-import { ExponentialPipe } from './exponential.pipe';
-import { HighlightDirective } from './highlight.directive';
-import { HomeComponent } from './home/home.component';
-import { ProductosComponent } from './productos/productos.component';
-import { ContactosComponent } from './contactos/contactos.component';
+
+import { ProductosComponent } from './components/productos/productos.component';
+//import { ContactosComponent } from './components/contactos/components/contactos.component';
 import { DemoComponent } from './demo/demo.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component'; //una vez agregado aca, tiene que ir al imports del NgModule
+
+import { PageNotFoundComponent } from './components/page-not-found/components/page-not-found.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { LayoutComponent } from './components/layout/components/layout.component'; //una vez agregado aca, tiene que ir al imports del NgModule
+import { SharedModule } from './shared/shared.module';
+import { CoreModule} from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    ExponentialPipe,
-    HighlightDirective,
-    HomeComponent,
-    ProductosComponent,
-    ContactosComponent,
+    //ProductComponent,
+    //ProductosComponent,
+    //ContactosComponent,
     DemoComponent,
-    HeaderComponent,
-    FooterComponent,
-    BannerComponent,
-    PageNotFoundComponent,
-    ProductDetailComponent
+    //PageNotFoundComponent,
+    //ProductDetailComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    CoreModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
