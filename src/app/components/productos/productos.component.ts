@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Product} from '../../models/product.model'
+import { Product} from '../../models/product.model';
+import { ProductsService} from '../../core/services/products.service';
 
 @Component({
   selector: 'app-productos',
@@ -9,44 +9,23 @@ import { Product} from '../../models/product.model'
 })
 export class ProductosComponent implements OnInit {
 
-  productos : Product [] = [
-    {
-      id: '1',
-      title: 'Camiseta Platzi',
-      price: 8000,
-      description: 'es una remera',
-      image:'../../..//assets/camiseta.png'
-    },
-    {
-      id: '2',
-      title: 'Camiseta Platzi 2',
-      price: 8000,
-      description: 'es una remera',
-      image:'../assets/camiseta.png'
-    },
-    {
-      id: '3',
-      title: 'Camiseta Platzi 3',
-      price: 8000,
-      description: 'es una remera',
-      image:'../assets/camiseta.png'
-    },
-    {
-      id: '4',
-      title: 'Camiseta Platzi 4',
-      price: 8000,
-      description: 'es una remera',
-      image:'../assets/camiseta.png'
-    }
-  ]
+  productos : Product [] = [];
 
-  constructor() { }
+  constructor( private productsService : ProductsService) { }
 
   ngOnInit(): void {
+    this.fetchProducts();
   }
 
   clickProduct(id : number){
     console.log('Producto');
     console.log(id);
+  }
+
+  fetchProducts(){
+    this.productsService.getAllProducts().
+    subscribe(products => {
+      this.productos = products;
+    });
   }
 }

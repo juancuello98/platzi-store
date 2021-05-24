@@ -30,14 +30,18 @@ const routes: Routes = [
       {
         path:'demo',
         component: DemoComponent
-      },
-      {
-        path:'**',
-        loadChildren: () => import('./components/page-not-found/page.notfound.module').then(c => c.PageNotFoundModule) // cambiar aca
       }
     ]
-  }
+  },
+  {
 
+      path: 'admin',
+      loadChildren: () => import('./admin/admin.module').then(a => a.AdminModule)
+  },
+  {
+      path:'**',
+      loadChildren: () => import('./components/page-not-found/page.notfound.module').then(c => c.PageNotFoundModule) // cambiar aca
+  }
 ];
 
 @NgModule({

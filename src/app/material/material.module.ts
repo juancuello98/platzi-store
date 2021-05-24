@@ -10,9 +10,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 
 
+
 @NgModule({
   declarations: [],
-  imports: [CommonModule, MatButtonModule, MatToolbarModule,MatIconModule,MatBadgeModule,MatCardModule,MatInputModule,MatRadioModule, MatSelectModule,],
+  imports: [CommonModule, MatButtonModule, MatToolbarModule,MatIconModule,MatBadgeModule,MatCardModule,MatInputModule,MatRadioModule, MatSelectModule],
   exports: [MatButtonModule, MatToolbarModule,MatIconModule,MatBadgeModule,MatCardModule,MatInputModule, MatSelectModule,MatRadioModule],
 })
 export class MaterialModule {}

@@ -17,7 +17,7 @@ export class ProductComponent{
 
   AddCart(){
     this.productClicked.emit(this.producto.id)
-    console.log('Anadir al carrito')
+    console.log('Añadir al carrito')
   }
 
 }
