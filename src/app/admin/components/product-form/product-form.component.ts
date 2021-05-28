@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators , FormGroup} from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { ProductsService } from '../../../core/services/products.service';
 
 @Component({
   selector: 'app-product-form',

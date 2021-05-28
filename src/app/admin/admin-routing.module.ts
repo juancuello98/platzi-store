@@ -5,6 +5,9 @@ import { NavComponent} from '../admin/components/nav/nav.component';
 import { DashboardComponent} from '../admin/components/dashboard/dashboard.component';
 import { TableDataSource } from '../admin/components/table/table-datasource';
 import { TableComponent } from './components/table/table.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductCreateComponent} from './components/product-create/product-create.component';
+
 const routes: Routes = [
 
   {
@@ -22,7 +25,16 @@ const routes: Routes = [
       {
         path:'table',
         component: TableComponent
+      },
+      {
+        path:'products',
+        component: ProductListComponent
+      },
+      {
+        path:'products/create',
+        component: ProductCreateComponent
       }
+
     ]
   }
 ];
